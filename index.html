@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mensagens Automáticas</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="shortcut icon" href="./img/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="topo">
+    <h3 class="mensagem">Mensagens Automáticas <br>para WhatsApp</h3> <br>
+    <p>1 - Escolha sua mensagem <br>
+      2 - Digite o número e tecle enter
+    </p>
+  </div>
+
+  <div class="container">
+    <div class="box" onclick="enviarmsg(this)">
+      <p>Bom dia🌻 </p>
+      <img src="./img/icon.png">
+    </div>
+    <div class="box" onclick="enviarmsg(this)">
+      <p>Hora de estudar🤓</p>
+      <img src="./img/icon.png">
+    </div>
+    <div class="box" onclick="enviarmsg(this)">
+      <p>Estou com saudade❤️</p>
+      <img src="./img/icon.png">
+    </div>
+    <div class="box" onclick="enviarmsg(this)">
+      <p>Que tal uma pizza?🍕</p>
+      <img src="./img/icon.png">
+    </div>
+    <div class="box" onclick="enviarmsg(this)">
+      <p>Vamos ver um filme?🥰</p>
+      <img src="./img/icon.png">
+    </div>
+    <div class="box" onclick="enviarmsg(this)">
+      <p>Boa noite!🌙</p>
+      <img src="./img/icon.png">
+    </div>
+  </div>
+
+  <footer>
+    <a href="https://github.com/anapaulampaim">Desenvolvido por Ana Paula Machado &copy; 2022</a>
+  </footer>
+  <script>
+    function enviarmsg(elemento) {
+      let texto = elemento.firstElementChild.innerText;
+      let numero = prompt("Qual é o número?")
+      console.log(numero);
+      let linkwhats = `https://api.whatsapp.com/send?phone=55${numero}&text=${texto}`;
+
+      window.open(linkwhats);
+    }
+  </script>
+</body>
+
+</html>
